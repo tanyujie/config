@@ -1,1 +1,16 @@
 
+spring:
+  ##多数据源
+  datasource:
+    #主库
+    master:
+      jdbcUrl: jdbc:sqlserver://10.190.1.7:1433;DatabaseName=province
+      username: sa
+      password: admin@123
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    #从库
+    slaver:
+      jdbcUrl: jdbc:sqlserver://10.190.1.7:1433;DatabaseName=ProvinceSlaver
+      username: sa
+      password: admin@123
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
